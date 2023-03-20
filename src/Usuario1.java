@@ -33,7 +33,7 @@ public class Usuario1 implements Comparable {
     }
 
     public int compareTo(Object o) {
-        Usuario1 otroUsuario = (Usuario1) o;
+        Usuario1 otroUsuario = (Usuario1) o;//Hacemos un cast del objeto pasador por parametro para pasarlo como Usuario1
         //podemos hacer esto porque String implementa Comparable
         //return nombre.compareTo(otroUsuario.getNombre());
         return edad- (otroUsuario.getEdad());// Esto sería para comporar edad
