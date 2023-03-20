@@ -32,11 +32,18 @@ public class Usuario1 implements Comparable {
         return nombre + " (" + edad + ")";
     }
 
-    public int compareTo(Object o) {
-        Usuario1 otroUsuario = (Usuario1) o;//Hacemos un cast del objeto pasador por parametro para pasarlo como Usuario1
+    public int EdadComparator(Object o) {
+        Usuario1 otroUsuario = (Usuario1) o;//Hacemos un cast del objeto pasador por parametro para pasarlo como Usuario1º
         //podemos hacer esto porque String implementa Comparable
         //return nombre.compareTo(otroUsuario.getNombre());
-        return edad- (otroUsuario.getEdad());// Esto sería para comporar edad
+        return edad- (otroUsuario.getEdad());// Esto sería para comporar edad lo que hace es si edad es menor que edadOtrousuario devuelve un negativo y si ponemos primero otroUsuario - edad lo ordena de mas a menos
+        
+    }
+    public int NombreComparator(Object e) {
+        Usuario1 otroUsuariA = (Usuario1) e;//Hacemos un cast del objeto pasador por parametro para pasarlo como Usuario1º
+        //podemos hacer esto porque String implementa Comparable
+        return nombre.compareTo(otroUsuariA.getNombre());
+        
         
     }
 
@@ -52,6 +59,11 @@ public class Usuario1 implements Comparable {
         //metodo que imprime la lista
         System.out.println(lista);
 
+    }
+
+    @Override
+    public int compareTo(Object t) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

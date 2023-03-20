@@ -43,7 +43,7 @@ class NombreComparator implements Comparator {
         ArrayList lista = new ArrayList();
         lista.add(new Usuario("Andrea", 11));
         lista.add(new Usuario("Barbara", 2));
-        lista.add(new Usuario("Carmen", 3));
+        lista.add(new Usuario("Aarmen", 3));
         lista.add(new Usuario("Deborah", 44));
         System.out.println(lista);
         System.out.println("\n Ahora ordenados por nombre...");
@@ -53,6 +53,8 @@ class NombreComparator implements Comparator {
         System.out.println("\n y ahora ordenados por edad...");
         Collections.sort(lista, new EdadComparator());
         //metodo que imprime la lista
+        System.out.println(lista);
+        Collections.reverse(lista);
         System.out.println(lista);
 
     }
